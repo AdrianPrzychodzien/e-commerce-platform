@@ -7,7 +7,7 @@ import './App.css';
 
 import Homepage from './pages/homepage/Homepage';
 import ShopPage from './pages/shop/Shop';
-import SignIn_SignUp from './pages/SignIn_SignUp/SignIn_SignUp';
+import signInSignUp from './pages/signInSignUp/signInSignUp';
 import CheckoutPage from './pages/checkout/checkout';
 
 import Header from './components/header/Header';
@@ -52,7 +52,7 @@ class App extends React.Component {
             this.props.currentUser ? (
               <Redirect to='/' />
             ) : (
-                <SignIn_SignUp />
+                <signInSignUp />
               )}
           />
         </Switch>
