@@ -56,3 +56,5 @@ justify-content: center;
 
 ${getButtonStyles}
 `
+
+CustomButtonContainer.displayName = 'CustomButtonContainer'

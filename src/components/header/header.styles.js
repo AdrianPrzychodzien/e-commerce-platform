@@ -13,6 +13,7 @@ height: 90px;
 justify-content: space-between;
 margin-bottom: 25px;
 `
+HeaderContainer.displayName = 'HeaderContainer'
 
 export const LogoContainer = styled(Link)`
 height: 100%;
