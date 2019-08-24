@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import FormInput from '../form-input/FormInput';
 import CustomButton from '../custom-button/CustomButton';
 
-import { signUpStart } from '../../redux/user/user.actions'
+import { signUpStart } from '../../redux/user/user.actions';
 
 import './SignUp.scss'
 
@@ -78,7 +78,6 @@ const SignUp = ({ signUpStart }) => {
     </div>
   )
 }
-
 
 const mapDispatchToProps = dispatch => ({
   signUpStart: (userCredentials) => dispatch(signUpStart(userCredentials))
