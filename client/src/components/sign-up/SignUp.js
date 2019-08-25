@@ -8,7 +8,7 @@ import { signUpStart } from '../../redux/user/user.actions';
 
 import './SignUp.scss'
 
-const SignUp = ({ signUpStart }) => {
+const SignUp = ({ signUpStart, userError }) => {
   const [userCredentials, setUserCredentials] = useState({
     displayName: '',
     email: '',
@@ -17,7 +17,6 @@ const SignUp = ({ signUpStart }) => {
   })
 
   const { displayName, email, password, confirmPassword } = userCredentials
-
 
   const handleSubmit = async e => {
     e.preventDefault()
