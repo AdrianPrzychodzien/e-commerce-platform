@@ -1,18 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import Homepage from './pages/homepage/Homepage';
-import ShopPage from './pages/shop/Shop';
-import SignInAndSignUpPage from './pages/signInSignUp/signInSignUp';
-import CheckoutPage from './pages/checkout/checkout';
 import Header from './components/header/Header';
+import Spinner from './components/spinner/spinner';
 
 import { GlobalStyle } from './global.styles';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
-import { checkUserSession } from './redux/user/user.actions'
+import { checkUserSession } from './redux/user/user.actions';
+
+const Homepage = lazy(() => import('./pages/homepage/Homepage'))
+const ShopPage = lazy(() => import('./pages/shop/Shop'))
+const SignInAndSignUpPage = lazy(() => import('./pages/signInSignUp/signInSignUp'))
+const CheckoutPage = lazy(() => import('./pages/checkout/checkout'))
+
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
@@ -24,16 +27,18 @@ const App = ({ checkUserSession, currentUser }) => {
       <GlobalStyle />
       <Header />
       <Switch>
-        <Route exact path='/' component={Homepage} />
-        <Route path='/shop' component={ShopPage} />
-        <Route exact path='/checkout' component={CheckoutPage} />
-        <Route exact path='/signin' render={() =>
-          currentUser ? (
-            <Redirect to='/' />
-          ) : (
-              <SignInAndSignUpPage />
-            )}
-        />
+        <Suspense fallback={<Spinner />} >
+          <Route exact path='/' component={Homepage} />
+          <Route path='/shop' component={ShopPage} />
+          <Route exact path='/checkout' component={CheckoutPage} />
+          <Route exact path='/signin' render={() =>
+            currentUser ? (
+              <Redirect to='/' />
+            ) : (
+                <SignInAndSignUpPage />
+              )}
+          />
+        </Suspense>
       </Switch>
     </div>
   );
