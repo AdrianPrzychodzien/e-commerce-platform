@@ -1,6 +1,5 @@
 import CartActionTypes from './cart.types';
 import cartReducer from './cart.reducer'
-import { isTSEnumDeclaration } from '@babel/types';
 
 const initialState = {
   hidden: true,
