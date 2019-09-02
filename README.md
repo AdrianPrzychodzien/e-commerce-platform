@@ -15,9 +15,9 @@ so it is possible to create new profile, sign out and sign in without making a n
 
 ## Tools & technologies I've used
 
+- Redux (selectors, persist, saga, hooks) 
 - Firebase/firestore
 - Google sign in authentication
-- Redux (selectors, persist, saga, hooks) 
 - Local storage
 - Stripe payment
 - Styled-components
