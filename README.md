@@ -1,4 +1,4 @@
-![e-commerce platform](src/assets/demo.jpg)
+![e-commerce platform](client/src/assets/demo.jpg)
 
 # E-commerce platform
 
