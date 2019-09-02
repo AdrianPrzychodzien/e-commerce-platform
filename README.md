@@ -12,9 +12,10 @@ so it is possible to create new profile, sign out and sign in without making a n
 
 
 ## Tools & technologies I've used
+
 - Firebase/firestore
 - Google sign in authentication
-- Redux (selectors, persist, saga, hooks, 
+- Redux (selectors, persist, saga, hooks) 
 - Local storage
 - Stripe payment
 - Styled-components
@@ -22,3 +23,13 @@ so it is possible to create new profile, sign out and sign in without making a n
 - React Lazy
 - PWA
 - React Enzyme (unit tests)
+
+
+## My experience
+
+It was the biggest project I have built so far. Few weeks of constant learning about different technologies, frameworks and features
+that are connected to React JS gave me a lot of experience with library. Although project contains things that I have mentioned before I also familiarised with GraphQl and Apollo, thunk middleware and Context API. 
+This project has taught me a number of things. 
+One, it has taught me that it is very important to organise all of the components in a clear structure that allows easy access to every part. 
+Second, I have learnt that there is a lot of tools and technologies that I can use in my code to handle for example fetching data from database or manage state, bo it depends on specific example. All of it has his own pros and cons, in most cases it will be a tradeoff.
+Third- components should be written in a simple way, that allows to reuse them in different part of project and test. 
