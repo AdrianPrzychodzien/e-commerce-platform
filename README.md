@@ -1,5 +1,7 @@
 ![e-commerce platform](client/src/assets/demo.jpg)
 
+## This project was built during React JS course
+
 # E-commerce platform
 
 This e-commerce project has navigation and routing which takes user to different categories of pages. 
