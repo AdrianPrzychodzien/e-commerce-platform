@@ -2,7 +2,7 @@
 
 # E-commerce platform
 
-This e-commerce project has navigation and routing whick takes user to different categories of pages. 
+This e-commerce project has navigation and routing which takes user to different categories of pages. 
 Each item has his own button that allows to add him to a cart. 
 All of the added items are displayed in cart dropdown which takes user to checkout page. 
 Here is the place to increase, decrease od delete items from cart or start making a payment.
